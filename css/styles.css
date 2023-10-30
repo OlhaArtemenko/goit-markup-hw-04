@@ -84,6 +84,15 @@ font-style: normal;
 }
 .hero-section {
     background-color: #2E2F42;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(/images/people-office\ 1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .title {
 color: white;
@@ -174,6 +183,7 @@ margin: 0 auto;
 }
 .team-member-role {
     font-size: 16px;
+    margin-bottom: 8px;
 }
 .portfolio-title {
     color: #2E2F42;
@@ -209,25 +219,23 @@ margin: 0 auto;
     color: #F4F4FD;
 
 }
-.hero-section {
-    padding-top: 188px;
-    padding-bottom: 188px;
-}
 .nav-box {
     display: flex;
     align-items: center;
+    height: 72px;
 }
 .navigation {
     display: flex;
     gap: 40px;
+    align-self: baseline;
 }
 .address-nav {
     display: flex;
     gap: 40px;
 }
 .header-menu {
-    border-bottom: 1px solid #E7E9FC;
-    
+    border-bottom: 1px solid #E7E9FC; 
+    height: 72px; 
 }
 .container-header {
     max-width: 1158px;
@@ -271,4 +279,74 @@ margin: 0 auto;
     padding: 32px 16px;
     border: 1px solid #e7e9fc;
     border-top: none;
+}
+
+.current-page-link::after {
+    display: block;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    content: "";
+    margin-top: 20px;
+}
+.link-portfolio:hover::after {
+    display: block;
+    width: 66px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    content: "";
+    margin-top: 20px;
+}
+.link-contacts:hover::after {
+  display: block;
+  width: 67px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #404BBF;
+  content: "";
+  margin-top: 20px;
+}
+.icon-box {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    background-color: #F4F4FD;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.icon-soclink-list {
+    display: inline-flex;
+    gap: 24px;
+}
+.icon-soclink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+    transition: background-color 250ms ease-in-out 0ms,
+    fill 250ms ease-in-out 0ms;
+}
+.icon-soclink:hover {
+    background-color: #404BBF;
+    fill: #F4F4FD;
+}
+.icon-soclink-list svg {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    fill: none;
+}
+.portfolio-list-item {
+    transition: box-shadow 250ms ease-in-out 0ms;
+}
+.portfolio-list-item:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
