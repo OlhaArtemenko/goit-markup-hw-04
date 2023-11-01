@@ -44,6 +44,7 @@ img {
     font-weight: 500;
     padding: 24px 0;
     display: block;
+    height: 72px;
 }
 .link:focus {
     color: #404BBF;
@@ -120,6 +121,7 @@ margin: 0 auto;
     margin: 48px auto 0;
     min-width: 169px;
     height: 56px;
+    transition: background-color 250ms ease-in-out 0ms;
 }
 .button:hover {
     background-color: #404BBF;
@@ -222,7 +224,6 @@ margin: 0 auto;
 .nav-box {
     display: flex;
     align-items: center;
-    height: 72px;
 }
 .navigation {
     display: flex;
@@ -280,7 +281,9 @@ margin: 0 auto;
     border: 1px solid #e7e9fc;
     border-top: none;
 }
-
+.current-page-link {
+    color: #404BBF;
+}
 .current-page-link::after {
     display: block;
     width: 48px;
@@ -349,4 +352,62 @@ margin: 0 auto;
 }
 .portfolio-list-item:hover {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.title-soclist-footer {
+    font-weight: 500;
+    color: white;
+    margin-bottom: 16px;
+}
+.container-footer {
+    display: flex;
+    gap: 120px;
+}
+.icon-soclink-list-footer {
+    display: inline-flex;
+    gap: 16px;
+}
+.icon-soclink-list-footer svg {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    fill: none;
+}
+.icon-soclink-list-footer .icon-soclink{
+    transition: background-color 250ms ease-in-out 0ms;
+}
+.icon-soclink-list-footer .icon-soclink:hover {
+    background-color: #31D0AA;
+}
+
+.portfolio-list-item {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #4D5AE5;
+    border: 1px solid #F4F4FD;
+
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out 0ms,
+    box-shadow 250ms ease-in-out 0ms;
+}
+.portfolio-list-item:hover .overlay {
+    transform: translateY(0);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+                0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+                0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.overlay p{
+    color: #F4F4FD;
+    margin-top: 40px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+.text-portfolio-list-item {
+    z-index: 20;
 }
