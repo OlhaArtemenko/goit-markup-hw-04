@@ -45,10 +45,10 @@ img {
     padding: 24px 0;
     display: block;
     height: 72px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
-.link:focus {
-    color: #404BBF;
-}
+.link:focus,
 .link:hover {
     color: #404BBF;
 }
@@ -76,13 +76,13 @@ font-style: normal;
 .link-address {
     text-decoration: none;
     color: #434455;
+    transition: color 250ms 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-address:hover {
-    color: #404BBF;
-}
+.link-address:hover,
 .link-address:focus {
     color: #404BBF;
 }
+
 .hero-section {
     background-color: #2E2F42;
     padding-top: 188px;
@@ -90,10 +90,12 @@ font-style: normal;
     background-image: linear-gradient(to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
-        url(/images/people-office\ 1.jpg);
+        url(../images/people-office\ 1.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: cover;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 .title {
 color: white;
@@ -179,7 +181,9 @@ margin: 0 auto;
 .team-member-card {
     background-color: #FFFFFF;
     text-align: center;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -282,6 +286,9 @@ margin: 0 auto;
     border-top: none;
     background-color: white;
 }
+.link {
+    position: relative;
+}
 .current-page-link {
     color: #404BBF;
 }
@@ -292,7 +299,9 @@ margin: 0 auto;
     border-radius: 2px;
     background-color: #404BBF;
     content: "";
-    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
 }
 .link-portfolio:hover::after {
     display: block;
@@ -301,7 +310,9 @@ margin: 0 auto;
     border-radius: 2px;
     background-color: #404BBF;
     content: "";
-    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
 }
 .link-contacts:hover::after {
   display: block;
@@ -310,7 +321,9 @@ margin: 0 auto;
   border-radius: 2px;
   background-color: #404BBF;
   content: "";
-  margin-top: 20px;
+  position: absolute;
+    left: 0;
+    bottom: -1px;
 }
 .icon-box {
     display: flex;
@@ -324,10 +337,12 @@ margin: 0 auto;
     margin-bottom: 8px;
 }
 .icon-soclink-list {
-    display: inline-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 24px;
 }
-.icon-soclink {
+.link-icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -338,7 +353,9 @@ margin: 0 auto;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-soclink:hover {
+
+.link-icon:hover,
+.link-icon:focus {
     background-color: #404BBF;
     fill: #F4F4FD;
 }
@@ -373,10 +390,11 @@ margin: 0 auto;
     object-fit: cover;
     fill: none;
 }
-.icon-soclink-list-footer .icon-soclink{
+.icon-soclink-list-footer .link-icon{
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-soclink-list-footer .icon-soclink:hover {
+.icon-soclink-list-footer .link-icon:hover,
+.icon-soclink-list-footer .link-icon:focus {
     background-color: #31D0AA;
 }
 
@@ -400,7 +418,7 @@ margin: 0 auto;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-list-item:hover .overlay {
+.portfolio-list-item:hover .overlay{
     transform: translateY(0);
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
                 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
