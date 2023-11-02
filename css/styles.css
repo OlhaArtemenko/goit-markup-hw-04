@@ -378,10 +378,13 @@ margin: 0 auto;
 }
 .container-footer {
     display: flex;
-    gap: 120px;
+    align-items: baseline;
+}
+.box-logo-text {
+margin-right: 120px;
 }
 .icon-soclink-list-footer {
-    display: inline-flex;
+    display: flex;
     gap: 16px;
 }
 .icon-soclink-list-footer svg {
